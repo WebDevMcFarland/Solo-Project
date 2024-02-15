@@ -1,0 +1,68 @@
+.register-page {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(41, 31, 16);
+    width: 400px;
+    margin: auto;
+    background-color: #7cac49;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 5px;
+}
+
+.register-form {
+    margin-top: 30px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-input {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.register-input label {
+    color: #000; /* Adjust text color as needed */
+}
+
+.register-input input[type="text"],
+.register-input input[type="password"] {
+    width: 285px; /* Adjust input width as needed */
+    height: 30px; /* Adjust input height as needed */
+    border-radius: 5px; /* Add border radius to inputs */
+    border: 2px solid #000; /* Add border to inputs */
+    margin-left: 5px;
+    background-color: #cde3b6;
+}
+
+.register-input input[type="text"]::placeholder,
+.register-input input[type="password"]::placeholder {
+    color: #525252; /* Adjust placeholder text color */
+    text-indent: 5px;
+}
+
+.register-submit {
+    width: 120px; /* Adjust button width as needed */
+    height: 40px; /* Adjust button height as needed */
+    font-size: 15px;
+    margin-top: 15px; /* Adjust as needed */
+    cursor: pointer;
+    background-color: #918052;
+    color: #fff; /* Adjust text color as needed */
+    border-radius: 5px; /* Add border radius to button */
+    border: 2px solid black; /* Remove button border */
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.register-submit:hover {
+    background-color: #ab8f6c; /* Change button color on hover */
+}

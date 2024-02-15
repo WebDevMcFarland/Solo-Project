@@ -1,0 +1,93 @@
+
+.login-page {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(41, 31, 16);
+    width: 400px;
+    margin: auto;
+    background-color: #7cac49;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 5px;
+
+}
+
+.login-form {
+    margin-top: 30px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-input {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.login-input label {
+    color: #000; /* Adjust text color as needed */
+}
+
+.login-input input[type="text"],
+.login-input input[type="password"] {
+    width: 285px; /* Adjust input width as needed */
+    height: 30px; /* Adjust input height as needed */
+    border-radius: 5px; /* Add border radius to inputs */
+    border: 2px solid #000; /* Add border to inputs */
+    margin-left: 5px;
+    background-color:#cde3b6;
+}
+.login-input input[type="text"]::placeholder,
+.login-input input[type="password"]::placeholder {
+    color: #525252; /* Adjust placeholder text color */
+    text-indent: 5px;
+}
+
+.login-submit {
+    width: 100px; /* Adjust button width as needed */
+    height: 40px; /* Adjust button height as needed */
+    margin-top: 15px; /* Adjust as needed */
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #918052;
+    color: #fff; /* Adjust text color as needed */
+    border-radius: 5px; /* Add border radius to button */
+    border: 2px solid #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.login-submit:hover {
+    background-color: #ab8f6c; /* Change button color on hover */
+}
+
+.login-submit {
+    /* Other styles remain the same */
+    margin-bottom: 10px; /* Reduce margin bottom for login button */
+}
+
+.login-submit-register-submit{
+    width: 150px; /* Adjust button width as needed */
+    height: 40px; /* Adjust button height as needed */
+    margin-top: 15px; /* Adjust as needed */
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #918052;
+    color: #fff; /* Adjust text color as needed */
+    border-radius: 5px; /* Add border radius to button */
+    border: 2px solid #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Adjust margin top for register button */
+
+.login-submit-register-submit:hover {
+    background-color: #ab8f6c; /* Change button color on hover */
+}
