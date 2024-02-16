@@ -88,6 +88,7 @@
     height: 25px; /* Adjust button height as needed */
     margin-top: 15px; /* Adjust as needed */
     margin-bottom: 10px;
+    margin-left: 5px;
     font-size: 12px;
     cursor: pointer;
     background-color: #918052;
@@ -99,4 +100,10 @@
 
 .recipe-remove-ingredient:hover {
     background-color: #ab8f6c; /* Change button color on hover */
+}
+
+.Ingredients-Label{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }

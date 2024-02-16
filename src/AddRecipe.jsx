@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AddRecipe.css';
-import { useState } from 'react';
+import axios from 'axios';
 
 function AddRecipe() {
     const [recipeData, setRecipeData] = useState({
@@ -28,17 +28,24 @@ function AddRecipe() {
         list.splice(index, 1);
         setRecipeData({ ...recipeData, ingredients: list });
     };
-    // const handleSubmit = async e => {
-    //     e.preventDefault();
-    //     console.log(recipeData); // Log recipeData before submitting
-    //     // Add your logic to submit recipe data to backend
-    // };
-    
+
+    const handleSubmit = async e => {
+        e.preventDefault();
+        try {
+            // Send recipe data to the backend
+            await axios.post('/addrecipes', recipeData);
+            // Navigate to the recipes page after successful submission
+            window.location.href = '/recipes';
+        } catch (error) {
+            console.error('Error submitting recipe:', error);
+            // Handle any errors that occur during submission
+        }
+    };
 
     return (
         <div className="recipe-page">
             <div className='title'>ADD YOUR RECIPE</div>
-            <form className="recipe-form" action="/addrecipes" method="POST">
+            <form className="recipe-form" onSubmit={handleSubmit}>
                 <div className="recipe-input">
                     <label htmlFor="title">Recipe Name: </label>
                     <input
@@ -91,10 +98,10 @@ function AddRecipe() {
                     </div>
                 ))}
                 <button className="recipe-add-ingredient" type="button" onClick={handleAddIngredient}>Add Ingredient</button>
-                <button className="recipe-submit" type="submit" >Submit Recipe</button> 
+                <button className="recipe-submit" type="submit">Submit Recipe</button>
             </form>
         </div>
     );
 }
-//onClick={handleSubmit}
+
 export default AddRecipe;

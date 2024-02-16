@@ -6,6 +6,9 @@ const mongoose = require('mongoose');
 const userController = require('./controllers/userController')
 const recipeController = require('./controllers/recipeController')
 
+const Recipe = require('./models/recipeModel');
+const User = require('./models/userModel');
+
 const app = express();
 
 
@@ -65,6 +68,15 @@ app.post('/addrecipes', recipeController.addRecipe, (req, res) => {
   return res.redirect('/recipes')
 })
 
+app.get('/getuserrecipes', recipeController.getRecipes, (req, res) => {
+  return res.status(200);
+});
+
+app.delete('/deleteRecipe/:id', recipeController.deleteRecipe, (req, res) => {
+return res.status(200);
+})
+
+
 app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, '../dist/404.html'));
 });
@@ -72,7 +84,7 @@ app.use((req, res) => {
 
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1337;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

@@ -1,14 +1,14 @@
 import React from "react";
 import "./Register.css";
 
-const regsiterUser = () => {
+const login = () => {
   window.location.href = "/login";
 };
 
 function Register() {
   return (
     <div className="register-page">
-      <div>REGISTRATION PAGE</div>
+      <div className="title">REGISTER YOUR ACCOUNT</div>
       <form className="register-form" method="POST" action="/register">
         <div className="register-input">
           <label htmlFor="username">Username: </label>
@@ -36,6 +36,7 @@ function Register() {
           id="button"
           value="Create Account"
         />
+        <input className="login-submit-register-submit" type="submit" id='register-button' value='Have an account?' action='/register' onClick={login}/>
       </form>
     </div>
   );

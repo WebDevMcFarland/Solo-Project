@@ -19,6 +19,10 @@
     padding-top: 5px;
 
 }
+.title{
+    margin-top: 10px;
+    font-size: 21px;
+}
 
 .login-form {
     margin-top: 30px; /* Adjust as needed */

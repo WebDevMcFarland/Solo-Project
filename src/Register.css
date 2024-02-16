@@ -18,6 +18,11 @@
     padding-top: 5px;
 }
 
+.title{
+    margin-top: 10px;
+    font-size: 21px;
+}
+
 .register-form {
     margin-top: 30px; /* Adjust as needed */
     display: flex;
@@ -65,4 +70,8 @@
 
 .register-submit:hover {
     background-color: #ab8f6c; /* Change button color on hover */
+}
+
+.login-submit-register-submit{
+    margin-bottom: 25px;
 }
